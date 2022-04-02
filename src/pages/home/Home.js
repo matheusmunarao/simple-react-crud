@@ -1,12 +1,14 @@
 import React from "react";
 import Title from "../../components/Title/Title.js";
+import Footer from "../../components/Footer/Footer.js";
 
-function Home() {
+const Home = () => {
   return (
     <>
       <Title />
+      <Footer />
     </>
   );
-}
+};
 
 export default Home;

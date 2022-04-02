@@ -1,8 +1,9 @@
 import React from "react";
+import Footer from "../../components/Footer/Footer";
 import Title from "../../components/Title/Title";
 import "./style.css";
 
-function Create() {
+const Create = () => {
   return (
     <>
       <Title />
@@ -47,8 +48,9 @@ function Create() {
           </div>
         </form>
       </div>
+      <Footer />
     </>
   );
-}
+};
 
 export default Create;
