@@ -3,10 +3,19 @@ table {
   width: 100%;
 }
 
-td,
-th {
+th,
+td {
   text-align: center;
   padding: 8px;
+  font-size: 18px;
+}
+
+.thead-tr {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 225, 255, 0.5),
+    rgb(0, 255, 0, 0.5)
+  );
 }
 
 tr:nth-child(even) {

@@ -10,7 +10,7 @@ const Read = () => {
       <div className="container">
         <table>
           <thead>
-            <tr>
+            <tr className="thead-tr">
               <th>First Name</th>
               <th>Last Name</th>
               <th>Age</th>
