@@ -1,7 +1,12 @@
 import React from "react";
+import Title from "../../components/Title/Title.js";
 
 function Home() {
-  return <div>Home</div>;
+  return (
+    <>
+      <Title />
+    </>
+  );
 }
 
 export default Home;
