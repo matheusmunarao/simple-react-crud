@@ -20,6 +20,26 @@ input {
   font-size: 18px;
 }
 
+button {
+  border: none;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 225, 255, 0.5),
+    rgb(0, 255, 0, 0.5)
+  );
+  padding: 15px;
+  border-radius: 15px;
+  margin: 25px auto;
+  width: 250px;
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
 .checkbox-field {
   display: flex;
   flex-direction: row;
