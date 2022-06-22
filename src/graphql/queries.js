@@ -9,6 +9,7 @@ export const getUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
@@ -27,6 +28,7 @@ export const listUsers = /* GraphQL */ `
         lastName
         age
         favoriteMovie
+        youLikeMe
         createdAt
         updatedAt
       }

@@ -12,6 +12,7 @@ export const createUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
@@ -28,6 +29,7 @@ export const updateUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
@@ -44,6 +46,7 @@ export const deleteUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }

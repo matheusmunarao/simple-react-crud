@@ -9,6 +9,7 @@ export const onCreateUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
@@ -22,6 +23,7 @@ export const onUpdateUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
@@ -35,6 +37,7 @@ export const onDeleteUser = /* GraphQL */ `
       lastName
       age
       favoriteMovie
+      youLikeMe
       createdAt
       updatedAt
     }
