@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { API, graphqlOperation } from "aws-amplify";
 import { listUsers } from "../../graphql/queries";
-import Footer from "../../components/Footer/Footer";
+// import Footer from "../../components/Footer/Footer";
 import Title from "../../components/Title/Title";
 import "./style.css";
 import { createUser } from "../../graphql/mutations";
