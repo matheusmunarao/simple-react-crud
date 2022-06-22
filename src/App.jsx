@@ -9,11 +9,7 @@ import Read from "./pages/read/Read.js";
 import Create from "./pages/create/Create.js";
 import Update from "./pages/update/Update.js";
 
-import { Amplify } from "aws-amplify";
-import config from "./aws-exports";
-
 import { withAuthenticator, AmplifySignOut } from "@aws-amplify/ui-react";
-Amplify.configure(config);
 
 const App = () => {
   return (
