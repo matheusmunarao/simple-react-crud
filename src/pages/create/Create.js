@@ -1,28 +1,30 @@
 import React, { useState } from "react";
+import { API, graphqlOperation } from "aws-amplify";
 import Footer from "../../components/Footer/Footer";
 import Title from "../../components/Title/Title";
 import "./style.css";
+import { createUser } from "../../graphql/mutations";
+
+const initialFormState = { name: "", lastName: "", age: 0, favoriteMovie: "" };
 
 const Create = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [age, setAge] = useState(0);
-  const [favoriteMovie, setFavoriteMovie] = useState("");
-  const [checkbox, setCheckbox] = useState(false);
+  const [userInfos, setUserInfos] = useState([]);
+  const [formData, setFormData] = useState(initialFormState);
+  // const [checkbox, setCheckbox] = useState(false);
   // const [radioButton, setRadionButton] = useState(options);
 
   // const changeRadio = (id, checked) => {};
 
-  const postData = () => {
-    console.log(firstName);
-    console.log(lastName);
-    console.log(age);
-    console.log(favoriteMovie);
-    console.log(checkbox);
-    // console.log(radioButton);
-  };
-
-  console.log(postData);
+  async function newUser() {
+    try {
+      await API.graphql(graphqlOperation(createUser, { input: formData }));
+      setUserInfos([...userInfos, formData]);
+      setFormData(initialFormState);
+      console.log("EXECUTOU");
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
   return (
     <>
@@ -34,7 +36,10 @@ const Create = () => {
             <input
               type="text"
               name="first-name"
-              onChange={(e) => setFirstName(e.target.value)}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+              value={formData.name}
             />
           </div>
           <div>
@@ -42,7 +47,10 @@ const Create = () => {
             <input
               type="text"
               name="last-name"
-              onChange={(e) => setLastName(e.target.value)}
+              onChange={(e) =>
+                setFormData({ ...formData, lastName: e.target.value })
+              }
+              value={formData.lastName}
             />
           </div>
           <div>
@@ -50,7 +58,10 @@ const Create = () => {
             <input
               type="text"
               name="age"
-              onChange={(e) => setAge(e.target.value)}
+              onChange={(e) =>
+                setFormData({ ...formData, age: e.target.value })
+              }
+              value={formData.age}
             />
           </div>
           <div>
@@ -58,10 +69,13 @@ const Create = () => {
             <input
               type="text"
               name="movie"
-              onChange={(e) => setFavoriteMovie(e.target.value)}
+              onChange={(e) =>
+                setFormData({ ...formData, favoriteMovie: e.target.value })
+              }
+              value={formData.favoriteMovie}
             />
           </div>
-          <div className="checkbox-field">
+          {/* <div className="checkbox-field">
             <label htmlFor="happy">check if you like me</label>
             <input
               type="checkbox"
@@ -88,7 +102,8 @@ const Create = () => {
             <button onClick={postData} type="submit">
               Submit
             </button>
-          </div>
+          </div> */}
+          <button onClick={() => newUser()}>Criar usuário</button>
         </form>
       </div>
       <Footer />

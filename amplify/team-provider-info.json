@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-simplereactcrud-dev-124845-authRole",
+      "UnauthRoleArn": "arn:aws:iam::572503058868:role/amplify-simplereactcrud-dev-124845-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::572503058868:role/amplify-simplereactcrud-dev-124845-authRole",
+      "Region": "sa-east-1",
+      "DeploymentBucketName": "amplify-simplereactcrud-dev-124845-deployment",
+      "UnauthRoleName": "amplify-simplereactcrud-dev-124845-unauthRole",
+      "StackName": "amplify-simplereactcrud-dev-124845",
+      "StackId": "arn:aws:cloudformation:sa-east-1:572503058868:stack/amplify-simplereactcrud-dev-124845/ce584f20-f242-11ec-a8b8-02a2abc5aa42",
+      "AmplifyAppId": "d28sck4u0f92vo"
+    },
+    "categories": {
+      "auth": {
+        "simplereactcrud52b66f2e": {}
+      }
+    }
+  }
+}

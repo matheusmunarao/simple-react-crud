@@ -16,3 +16,9 @@ body {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+.btn-signout {
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 100px;
+}

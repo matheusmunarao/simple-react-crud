@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "simplereactcrud",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "/home/matheusmunarao/projects/projeto-dwe/simple-react-crud/amplify/backend/api/simplereactcrud/schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
